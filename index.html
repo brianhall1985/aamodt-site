@@ -3,71 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aamodt Strategic</title>
+    <title>Aamodt Strategic | Government IT Solutions</title>
+    
     <style>
-        /* RESET EVERYTHING - SIMPLE WHITE BACKGROUND */
+        /* --- 1. MILLION DOLLAR BASE STYLES --- */
+        :root {
+            --navy-deep: #020b16;
+            --navy-primary: #051b35;
+            --gold-accent: #c9920e;
+            --white: #ffffff;
+            --text-grey: #444444;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
         body {
-            background-color: #ffffff; /* White */
-            color: #000000; /* Black Text */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 50px;
-            text-align: center;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-primary) 100%);
+            color: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
-        h1 {
-            color: #051b35; /* Navy */
-            font-size: 40px;
+        /* --- 2. LUXURY TEXT HEADER --- */
+        header {
+            width: 100%;
+            padding: 25px 0;
+            background: rgba(2, 11, 22, 0.95); /* Almost solid dark navy */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center; /* Center the name */
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .brand-name {
+            color: var(--white);
+            font-size: 1.4rem;
+            letter-spacing: 4px; /* The "Expensive" look */
+            font-weight: 800;
             text-transform: uppercase;
-            margin-bottom: 10px;
         }
 
-        h2 {
-            color: #c9920e; /* Gold */
-            font-size: 20px;
-            margin-bottom: 40px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            border: 2px solid #051b35;
-            padding: 40px;
-        }
-
-        .button {
-            display: inline-block;
-            background-color: #051b35;
-            color: white;
-            padding: 15px 30px;
-            text-decoration: none;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-
-    <h1>AAMODT STRATEGIC</h1>
-    <h2>GOVERNMENT IT OPERATIONS</h2>
-
-    <div class="container">
-        <p><strong>MISSION:</strong> Secure asset disposition and identity management for Federal, State, and Local agencies.</p>
-        
-        <br>
-        
-        <ul style="text-align: left;">
-            <li><strong>Systems Operations:</strong> Infrastructure & Cloud Management</li>
-            <li><strong>Strategic Consulting:</strong> NIST Compliance & Efficiency</li>
-            <li><strong>Program Support:</strong> Technical Leadership & Logistics</li>
-        </ul>
-
-        <a href="mailto:contact@aamodtstrategic.com" class="button">REQUEST CAPABILITY STATEMENT</a>
-    </div>
-
-    <p style="margin-top: 50px; color: #666;">
-        NAICS: 541519, 541513 | CAGE: Pending
-    </p>
-
-</body>
-</html>
+        /* --- 3. MAIN CONTENT (The Hero Card) --- */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:
