@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aamodt Strategic | Government IT Solutions</title>
     
-    <link rel="icon" type="image/png" href="logo.png.png">
+    <link rel="icon" type="image/png" href="logo.png">
 
     <style>
         /* BASE STYLES */
@@ -35,7 +35,7 @@
             width: 100%;
             padding: 15px 5%;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-start;
             align-items: center;
             position: fixed;
             top: 0;
@@ -48,7 +48,7 @@
 
         .brand-wrapper { display: flex; align-items: center; gap: 15px; }
 
-        /* LOGO IMAGE STYLES */
+        /* LOGO IMAGE */
         .logo-image { height: 50px; width: auto; border-radius: 4px; }
 
         .brand-name {
@@ -57,17 +57,6 @@
             letter-spacing: 1.5px;
             font-weight: 700;
             text-transform: uppercase;
-        }
-
-        .status-badge {
-            color: var(--gold-accent);
-            border: 1px solid var(--gold-accent);
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            display: inline-block;
         }
 
         /* MAIN HERO SECTION */
@@ -128,85 +117,4 @@
         .capabilities-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            text-align: left;
-            margin-bottom: 50px;
-            border-top: 1px solid #eee;
-            padding-top: 40px;
-        }
-
-        .cap-item h3 {
-            color: var(--navy-primary);
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        /* Gold Dot Bullet Point */
-        .cap-item h3::before {
-            content: '';
-            display: block;
-            width: 6px; height: 6px;
-            background-color: var(--gold-accent);
-            border-radius: 50%;
-        }
-
-        .cap-item p { font-size: 0.95rem; color: var(--text-grey); line-height: 1.5; }
-
-        /* BUTTON */
-        .btn-primary {
-            display: inline-block;
-            background-color: var(--navy-primary);
-            color: var(--white);
-            padding: 18px 40px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            text-decoration: none;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            background-color: var(--navy-light);
-            transform: translateY(-2px);
-        }
-
-        /* FOOTER INFO BAR */
-        .info-bar {
-            background-color: #f8f9fa;
-            border-top: 1px solid #e9ecef;
-            padding: 20px;
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-grey);
-        }
-
-        footer.site-footer {
-            text-align: center;
-            padding: 20px;
-            color: rgba(255,255,255,0.4);
-            font-size: 0.75rem;
-        }
-
-        /* MOBILE ADJUSTMENTS */
-        @media (max-width: 768px) {
-            .status-badge { display: none; }
-            h1.hero-headline { font-size: 1.8rem; }
-            .card-inner { padding: 40px 20px; }
-            header { padding: 15px; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="brand-wrapper">
-            <img src="logo.png.png" alt="Aamodt Strategic Logo" class="logo-image">
-            <div class="brand-name">Aamodt Strategic</div>
-        </div>
-        <div class="status-badge">SDVOSB CERTIFIED</div>
-    </header>
+            gap:
