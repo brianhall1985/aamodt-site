@@ -5,135 +5,280 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aamodt Strategic | Federal IT Solutions</title>
     <style>
-        /* Base Reset & Typography */
+        /* --- 1. MILLION DOLLAR BASE STYLES --- */
+        :root {
+            --navy-deep: #020b16;
+            --navy-primary: #051b35;
+            --navy-light: #0a2a50;
+            --gold-accent: #c9920e;
+            --gold-light: #e0a826;
+            --text-dark: #1a1a1a;
+            --text-grey: #555555;
+            --white: #ffffff;
+        }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #051b35; /* Navy Blue */
-            color: #333;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-primary) 100%);
+            color: var(--text-dark);
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
+            line-height: 1.6;
+        }
+
+        /* --- 2. PREMIUM HEADER (Sticky & Glass) --- */
+        header {
+            width: 100%;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            background: rgba(2, 11, 22, 0.95); /* Semi-transparent dark */
+            backdrop-filter: blur(10px); /* The "Premium" Blur Effect */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .brand-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            fill: var(--gold-accent);
+        }
+
+        .brand-name {
+            color: var(--white);
+            font-size: 1.25rem;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .status-badge {
+            background-color: rgba(201, 146, 14, 0.15);
+            color: var(--gold-accent);
+            border: 1px solid var(--gold-accent);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* --- 3. MAIN CONTENT (The "Hero" Section) --- */
+        main {
+            flex: 1;
+            display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
+            padding: 140px 20px 60px 20px; /* Top padding clears fixed header */
         }
 
-        /* Header */
-        header { width: 100%; text-align: center; padding-bottom: 20px; }
-        h1.brand-name {
-            color: #ffffff;
-            font-size: 1.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: 800;
-            margin-bottom: 20px;
+        .content-card {
+            background: var(--white);
+            width: 100%;
+            max-width: 900px;
+            padding: 0; /* Removing padding here to control internal layout */
+            border-radius: 4px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            position: relative;
         }
 
-        /* Gold Accent */
-        .accent-line { width: 100%; height: 4px; background-color: #c9920e; margin-bottom: 40px; }
+        /* Gold Top Bar on Card */
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--gold-accent), var(--gold-light));
+        }
 
-        /* Main Card */
-        .main-card {
-            background-color: #ffffff;
-            width: 90%;
-            max-width: 700px;
-            padding: 50px 40px;
+        .card-inner {
+            padding: 60px 50px;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-            border-radius: 2px;
-            margin-top: -20px;
         }
 
-        .headline {
-            color: #051b35;
-            font-size: 1.8rem;
+        h1.hero-headline {
+            color: var(--navy-primary);
+            font-size: 2.5rem;
             font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 10px;
             line-height: 1.2;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
         }
 
-        .sub-headline {
-            color: #c9920e; /* Gold */
+        p.hero-sub {
+            color: var(--gold-accent);
             font-size: 1.1rem;
             font-weight: 700;
             text-transform: uppercase;
-            margin-bottom: 30px;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
         }
 
-        .content-body {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #444;
-            margin-bottom: 30px;
+        p.hero-desc {
+            font-size: 1.1rem;
+            color: var(--text-grey);
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+        }
+
+        /* --- 4. CAPABILITIES GRID (Clean Layout) --- */
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
             text-align: left;
+            margin-bottom: 50px;
+            border-top: 1px solid #eee;
+            padding-top: 40px;
         }
 
-        .capabilities-list { text-align: left; margin: 20px 0; padding-left: 20px; }
-        .capabilities-list li { margin-bottom: 10px; }
+        .cap-item h3 {
+            color: var(--navy-primary);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-        /* Button */
-        .cta-button {
+        /* Small icons for list items */
+        .cap-item h3::before {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--gold-accent);
+            border-radius: 50%;
+        }
+
+        .cap-item p {
+            font-size: 0.95rem;
+            color: var(--text-grey);
+            line-height: 1.5;
+        }
+
+        /* --- 5. CALL TO ACTION (High End Button) --- */
+        .btn-primary {
             display: inline-block;
-            background-color: #051b35;
-            color: #ffffff;
-            padding: 15px 30px;
-            text-decoration: none;
+            background-color: var(--navy-primary);
+            color: var(--white);
+            padding: 18px 40px;
+            font-size: 0.9rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 4px;
-            transition: background 0.3s ease;
-            margin-bottom: 30px;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(5, 27, 53, 0.3);
         }
-        .cta-button:hover { background-color: #0a2a50; }
 
-        /* Footer Data */
-        .gov-codes {
-            border-top: 1px solid #eee;
-            padding-top: 20px;
+        .btn-primary:hover {
+            background-color: var(--navy-light);
+            transform: translateY(-2px); /* Subtle lift */
+            box-shadow: 0 8px 20px rgba(5, 27, 53, 0.4);
+        }
+
+        /* --- 6. FOOTER BAR --- */
+        .info-bar {
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            padding: 20px 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
             font-size: 0.85rem;
-            color: #666;
-            text-align: center;
+            color: var(--text-grey);
         }
-        .gov-codes strong { color: #051b35; }
 
-        footer { margin-top: 50px; color: #5d748f; font-size: 0.8rem; text-align: center; }
+        .info-item strong {
+            color: var(--navy-primary);
+        }
+
+        footer.site-footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.75rem;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            h1.hero-headline { font-size: 1.8rem; }
+            .card-inner { padding: 40px 25px; }
+            .capabilities-grid { grid-template-columns: 1fr; }
+            .status-badge { display: none; } /* Hide badge on mobile header to save space */
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1 class="brand-name">Aamodt Strategic</h1>
+        <div class="brand-wrapper">
+            <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+            </svg>
+            <div class="brand-name">Aamodt Strategic</div>
+        </div>
+        <div class="status-badge">SDVOSB CERTIFIED</div>
     </header>
 
-    <div class="accent-line"></div>
+    <main>
+        <div class="content-card">
+            <div class="card-inner">
+                <h1 class="hero-headline">Federal IT Operations & <br>Strategic Solutions</h1>
+                <p class="hero-sub">Mission-Critical Infrastructure Support</p>
+                
+                <p class="hero-desc">
+                    Aamodt Strategic, LLC delivers secure asset disposition, identity lifecycle management, and systems engineering for federal agencies and prime contractors.
+                </p>
 
-    <div class="main-card">
-        <h2 class="headline">Federal IT Operations & Strategic Solutions</h2>
-        
-        <h3 class="sub-headline">Service-Disabled Veteran-Owned Small Business (SDVOSB)</h3>
+                <div class="capabilities-grid">
+                    <div class="cap-item">
+                        <h3>Systems Operations</h3>
+                        <p>Enterprise infrastructure management, cloud optimization, and Microsoft 365 administration.</p>
+                    </div>
+                    <div class="cap-item">
+                        <h3>Strategic Consulting</h3>
+                        <p>Technology roadmap planning, compliance frameworks (NIST), and operational efficiency.</p>
+                    </div>
+                    <div class="cap-item">
+                        <h3>Program Support</h3>
+                        <p>Dedicated technical leadership and logistics for complex government requirements.</p>
+                    </div>
+                </div>
 
-        <div class="content-body">
-            <p>Providing mission-critical IT support, systems engineering, and strategic consulting for federal agencies and prime contractors.</p>
-            
-            <ul class="capabilities-list">
-                <li><strong>Systems Administration & Operations:</strong> Enterprise infrastructure management and optimization (Microsoft 365 / Cloud Environments).</li>
-                <li><strong>Strategic IT Consulting:</strong> Technology roadmap planning, compliance frameworks, and operational efficiency.</li>
-                <li><strong>Program Support Services:</strong> Dedicated technical leadership for government contracting requirements.</li>
-            </ul>
+                <a href="mailto:contact@aamodtstrategic.com" class="btn-primary">Request Capability Statement</a>
+            </div>
+
+            <div class="info-bar">
+                <div class="info-item"><strong>NAICS:</strong> 541519, 541513, 541611</div>
+                <div class="info-item"><strong>CAGE / UEI:</strong> Registration in Progress</div>
+            </div>
         </div>
+    </main>
 
-        <a href="mailto:contact@aamodtstrategic.com" class="cta-button">Request Capability Statement</a>
-
-        <div class="gov-codes">
-            <p><strong>NAICS:</strong> 541519, 541513, 541611 &nbsp;|&nbsp; <strong>CAGE/UEI:</strong> Registration in Progress</p>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 Aamodt Strategic, LLC. All Rights Reserved. United States of America</p>
+    <footer class="site-footer">
+        &copy; 2026 Aamodt Strategic, LLC. United States of America.
     </footer>
 
 </body>
