@@ -3,193 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- PRIMARY SEO METADATA -->
-    <title>Aamodt Strategic | Technology & Strategic Operations | Coming 2026</title>
-    <meta name="description" content="Aamodt Strategic provides high-tier systems integration, SOC 2 readiness, and ITIL-aligned strategic operations. Launching 2026.">
-    <meta name="keywords" content="Aamodt Strategic, Systems Integration, IT Operations, SOC 2 Readiness, GovCon, SDVOSB, Technology Strategy">
-    <meta name="author" content="Aamodt Strategic">
-    <link rel="canonical" href="https://www.aamodtstrategic.com/">
-
-    <!-- SEARCH ENGINE INDEXING -->
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    
-    <!-- SOCIAL MEDIA (OPEN GRAPH) -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Aamodt Strategic | Technology & Strategic Operations">
-    <meta property="og:description" content="Mission-critical systems integration and strategic IT operations. Launching 2026.">
-    <meta property="og:url" content="https://www.aamodtstrategic.com/">
-    <meta property="og:site_name" content="Aamodt Strategic">
-
-    <!-- STRUCTURED DATA (JSON-LD) FOR GOOGLE -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Aamodt Strategic",
-      "url": "https://www.aamodtstrategic.com",
-      "description": "Providing scalable systems integration and strategic technology operations.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "US"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "contact@aamodtstrategic.com",
-        "contactType": "Contracting Office"
-      }
-    }
-    </script>
-    
-    <!-- FAVICON -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 10L15 85H30L50 35L70 85H85L50 10Z' fill='%23002D62'/%3E%3Cpath d='M40 65H60V72H40V65Z' fill='%23b8860b'/%3E%3C/svg%3E">
-
+    <title>Aamodt Strategic | Federal IT Solutions</title>
     <style>
-        :root {
-            --bg-color: #0a192f; 
-            --card-bg: #ffffff;
-            --primary-navy: #002D62;
-            --accent-gold: #b8860b;
-            --text-main: #1a1a1a;
-            --text-muted: #4a4a4a;
-        }
-
+        /* Base Reset & Typography */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-main);
-            margin: 0;
-            background-color: var(--bg-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #051b35; /* Navy Blue */
+            color: #333;
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
             min-height: 100vh;
-            justify-content: center;
         }
 
-        :focus {
-            outline: 3px solid var(--accent-gold);
-            outline-offset: 2px;
-        }
-
-        header {
-            background-color: var(--primary-navy);
-            color: white;
-            padding: 4.5rem 1rem;
-            text-align: center;
-            border-bottom: 5px solid var(--accent-gold);
-        }
-
-        .logo-container {
-            margin-bottom: 2rem;
-            display: flex;
-            justify-content: center;
-        }
-
-        .logo-svg {
-            width: 120px;
-            height: 120px;
-            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.4));
-        }
-
-        .container {
-            max-width: 600px;
-            margin: -3.5rem auto 2.5rem auto;
-            background: var(--card-bg);
-            padding: 4rem 2rem;
-            border-radius: 4px;
-            box-shadow: 0 20px 45px rgba(0,0,0,0.7);
-            z-index: 10;
-            text-align: center;
-        }
-
-        h1 { 
-            margin: 0; 
-            font-size: 2.4rem; 
-            letter-spacing: 3px; 
-            font-weight: 800; 
-            text-transform: uppercase;
-        }
-        
-        .status-text {
-            font-size: 2rem;
-            color: var(--primary-navy);
-            font-weight: 700;
-            margin: 2.5rem 0;
-            text-transform: uppercase;
+        /* Header */
+        header { width: 100%; text-align: center; padding-bottom: 20px; }
+        h1.brand-name {
+            color: #ffffff;
+            font-size: 1.8rem;
             letter-spacing: 2px;
-        }
-
-        .tagline {
-            color: var(--text-muted);
-            font-weight: 600;
-            letter-spacing: 1px;
-            margin-bottom: 2.5rem;
             text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            background-color: var(--primary-navy);
-            color: white !important;
-            padding: 1.25rem 3.5rem;
-            text-decoration: none;
             font-weight: 800;
-            border-radius: 3px;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            border: 2px solid transparent;
+            margin-bottom: 20px;
         }
 
-        .btn-primary:hover {
-            background-color: #001a3a;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
+        /* Gold Accent */
+        .accent-line { width: 100%; height: 4px; background-color: #c9920e; margin-bottom: 40px; }
 
-        footer {
+        /* Main Card */
+        .main-card {
+            background-color: #ffffff;
+            width: 90%;
+            max-width: 700px;
+            padding: 50px 40px;
             text-align: center;
-            padding: 3rem 2rem;
-            color: #64748b;
-            font-size: 0.85rem;
-            letter-spacing: 0.5px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            border-radius: 2px;
+            margin-top: -20px;
         }
 
-        @media (max-width: 600px) {
-            .container { margin: 0; padding: 3.5rem 1.5rem; border-radius: 0; }
-            h1 { font-size: 1.8rem; letter-spacing: 2px; }
-            .status-text { font-size: 1.6rem; }
-            .logo-svg { width: 100px; height: 100px; }
+        .headline {
+            color: #051b35;
+            font-size: 1.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            line-height: 1.2;
         }
+
+        .sub-headline {
+            color: #c9920e; /* Gold */
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .content-body {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #444;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .capabilities-list { text-align: left; margin: 20px 0; padding-left: 20px; }
+        .capabilities-list li { margin-bottom: 10px; }
+
+        /* Button */
+        .cta-button {
+            display: inline-block;
+            background-color: #051b35;
+            color: #ffffff;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+            margin-bottom: 30px;
+        }
+        .cta-button:hover { background-color: #0a2a50; }
+
+        /* Footer Data */
+        .gov-codes {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #666;
+            text-align: center;
+        }
+        .gov-codes strong { color: #051b35; }
+
+        footer { margin-top: 50px; color: #5d748f; font-size: 0.8rem; text-align: center; }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo-container">
-        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aamodt Strategic Logo">
-            <path d="M50 10L15 85H30L50 35L70 85H85L50 10Z" fill="white"/>
-            <path d="M38 62H62V70H38V62Z" fill="#b8860b"/>
-            <path d="M50 35L42 55H58L50 35Z" fill="rgba(255,255,255,0.2)"/>
-        </svg>
+    <header>
+        <h1 class="brand-name">Aamodt Strategic</h1>
+    </header>
+
+    <div class="accent-line"></div>
+
+    <div class="main-card">
+        <h2 class="headline">Federal IT Operations & Strategic Solutions</h2>
+        
+        <h3 class="sub-headline">Service-Disabled Veteran-Owned Small Business (SDVOSB)</h3>
+
+        <div class="content-body">
+            <p>Providing mission-critical IT support, systems engineering, and strategic consulting for federal agencies and prime contractors.</p>
+            
+            <ul class="capabilities-list">
+                <li><strong>Systems Administration & Operations:</strong> Enterprise infrastructure management and optimization (Microsoft 365 / Cloud Environments).</li>
+                <li><strong>Strategic IT Consulting:</strong> Technology roadmap planning, compliance frameworks, and operational efficiency.</li>
+                <li><strong>Program Support Services:</strong> Dedicated technical leadership for government contracting requirements.</li>
+            </ul>
+        </div>
+
+        <a href="mailto:contact@aamodtstrategic.com" class="cta-button">Request Capability Statement</a>
+
+        <div class="gov-codes">
+            <p><strong>NAICS:</strong> 541519, 541513, 541611 &nbsp;|&nbsp; <strong>CAGE/UEI:</strong> Registration in Progress</p>
+        </div>
     </div>
-    <h1>AAMODT STRATEGIC</h1>
-</header>
 
-<main class="container" role="main">
-    <div class="status-text">Coming Soon 2026</div>
-    <p class="tagline">Technology & Strategic Operations</p>
-    <a href="mailto:contact@aamodtstrategic.com" class="btn-primary" aria-label="Email Aamodt Strategic, LLC Contracting Office">
-        Contact Us
-    </a>
-</main>
-
-<footer>
-    <p>&copy; 2026 Aamodt Strategic, LLC. All Rights Reserved.<br>
-    United States of America</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 Aamodt Strategic, LLC. All Rights Reserved. United States of America</p>
+    </footer>
 
 </body>
 </html>
-
