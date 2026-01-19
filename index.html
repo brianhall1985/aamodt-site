@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aamodt Strategic | Government IT Solutions</title>
+    
+    <link rel="icon" type="image/png" href="logo.png.png">
+
     <style>
-        /* --- 1. MILLION DOLLAR BASE STYLES --- */
+        /* BASE STYLES */
         :root {
             --navy-deep: #020b16;
             --navy-primary: #051b35;
             --navy-light: #0a2a50;
             --gold-accent: #c9920e;
             --gold-light: #e0a826;
-            --text-dark: #1a1a1a;
-            --text-grey: #555555;
             --white: #ffffff;
+            --text-grey: #555555;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -22,14 +24,13 @@
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-primary) 100%);
-            color: var(--text-dark);
+            color: #1a1a1a;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            line-height: 1.6;
         }
 
-        /* --- 2. PREMIUM HEADER (Sticky & Glass) --- */
+        /* HEADER */
         header {
             width: 100%;
             padding: 15px 5%;
@@ -39,24 +40,16 @@
             position: fixed;
             top: 0;
             z-index: 1000;
-            background: rgba(2, 11, 22, 0.95); /* Semi-transparent dark */
+            background: rgba(2, 11, 22, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 4px 20px rgba(0,0,0,0.4);
         }
 
-        .brand-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
+        .brand-wrapper { display: flex; align-items: center; gap: 15px; }
 
         /* LOGO IMAGE STYLES */
-        .logo-image {
-            height: 50px; 
-            width: auto;
-            border-radius: 4px;
-        }
+        .logo-image { height: 50px; width: auto; border-radius: 4px; }
 
         .brand-name {
             color: var(--white);
@@ -67,7 +60,6 @@
         }
 
         .status-badge {
-            background-color: rgba(201, 146, 14, 0.15);
             color: var(--gold-accent);
             border: 1px solid var(--gold-accent);
             padding: 6px 16px;
@@ -75,10 +67,10 @@
             font-size: 0.75rem;
             font-weight: 600;
             letter-spacing: 1px;
-            text-transform: uppercase;
+            display: inline-block;
         }
 
-        /* --- 3. MAIN CONTENT (The "Hero" Section) --- */
+        /* MAIN HERO SECTION */
         main {
             flex: 1;
             display: flex;
@@ -91,28 +83,21 @@
             background: var(--white);
             width: 100%;
             max-width: 900px;
-            padding: 0;
             border-radius: 4px;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             overflow: hidden;
             position: relative;
         }
 
-        /* Gold Top Bar on Card */
+        /* Gold Top Bar */
         .content-card::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
+            top: 0; left: 0; width: 100%; height: 6px;
             background: linear-gradient(90deg, var(--gold-accent), var(--gold-light));
         }
 
-        .card-inner {
-            padding: 60px 50px;
-            text-align: center;
-        }
+        .card-inner { padding: 60px 50px; text-align: center; }
 
         h1.hero-headline {
             color: var(--navy-primary);
@@ -120,7 +105,6 @@
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 15px;
-            letter-spacing: -0.5px;
         }
 
         p.hero-sub {
@@ -129,4 +113,100 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin
+            margin-bottom: 40px;
+        }
+
+        p.hero-desc {
+            font-size: 1.1rem;
+            color: var(--text-grey);
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+            line-height: 1.6;
+        }
+
+        /* CAPABILITIES GRID */
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: left;
+            margin-bottom: 50px;
+            border-top: 1px solid #eee;
+            padding-top: 40px;
+        }
+
+        .cap-item h3 {
+            color: var(--navy-primary);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Gold Dot Bullet Point */
+        .cap-item h3::before {
+            content: '';
+            display: block;
+            width: 6px; height: 6px;
+            background-color: var(--gold-accent);
+            border-radius: 50%;
+        }
+
+        .cap-item p { font-size: 0.95rem; color: var(--text-grey); line-height: 1.5; }
+
+        /* BUTTON */
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--navy-primary);
+            color: var(--white);
+            padding: 18px 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--navy-light);
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER INFO BAR */
+        .info-bar {
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-grey);
+        }
+
+        footer.site-footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.75rem;
+        }
+
+        /* MOBILE ADJUSTMENTS */
+        @media (max-width: 768px) {
+            .status-badge { display: none; }
+            h1.hero-headline { font-size: 1.8rem; }
+            .card-inner { padding: 40px 20px; }
+            header { padding: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand-wrapper">
+            <img src="logo.png.png" alt="Aamodt Strategic Logo" class="logo-image">
+            <div class="brand-name">Aamodt Strategic</div>
+        </div>
+        <div class="status-badge">SDVOSB CERTIFIED</div>
+    </header>
