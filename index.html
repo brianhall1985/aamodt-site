@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aamodt Strategic | Government IT Solutions</title>
     
-    <link rel="icon" type="image/png" href="logo.png">
-
     <style>
         /* --- 1. BASE STYLES --- */
         :root {
@@ -28,71 +26,64 @@
             flex-direction: column;
         }
 
-        /* --- 2. HEADER --- */
+        /* --- 2. HEADER (Text Only Version) --- */
         header {
             width: 100%;
-            padding: 15px 5%;
+            padding: 25px 5%; /* Taller padding for presence */
+            background: rgba(2, 11, 22, 0.9); 
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             display: flex;
             align-items: center;
+            justify-content: center; /* Center the text */
             position: fixed;
             top: 0;
             z-index: 1000;
-            background: rgba(2, 11, 22, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .brand-wrapper { display: flex; align-items: center; gap: 15px; }
-
-        /* LOGO SETTINGS */
-        .logo-image { 
-            height: 45px; 
-            width: auto; 
-            display: block;
-        }
-
+        /* The New "Text Logo" Style */
         .brand-name {
             color: var(--white);
-            font-size: 1.25rem;
-            letter-spacing: 1.5px;
-            font-weight: 700;
+            font-size: 1.5rem; /* Large and clear */
+            letter-spacing: 3px; /* Wide spacing = Premium look */
+            font-weight: 800; /* Extra Bold */
             text-transform: uppercase;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Subtle depth */
         }
 
         /* --- 3. MAIN CONTENT --- */
         main {
             flex: 1;
             display: flex;
-            align-items: center;
+            align-items: center; 
             justify-content: center;
-            /* Extra padding on top to ensure header doesn't hide content */
-            padding: 160px 20px 60px 20px;
+            padding: 120px 20px 60px 20px; /* Padding clears the header */
+            width: 100%;
         }
 
         .content-card {
             background: var(--white);
             width: 100%;
-            max-width: 900px;
+            max-width: 800px;
             border-radius: 4px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
             overflow: hidden;
             position: relative;
-            z-index: 1; /* Ensures card sits on top of background */
+            display: block; 
         }
 
         /* Gold Top Bar */
         .content-card::before {
             content: '';
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 6px;
+            top: 0; left: 0; width: 100%; height: 8px;
             background: #c9920e;
         }
 
-        .card-inner { padding: 60px 50px; text-align: center; }
+        .card-inner { padding: 50px 40px; text-align: center; }
 
         h1.hero-headline {
             color: var(--navy-primary);
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 15px;
@@ -104,33 +95,32 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         p.hero-desc {
             font-size: 1.1rem;
             color: var(--text-grey);
-            max-width: 700px;
-            margin: 0 auto 50px auto;
+            margin-bottom: 40px;
             line-height: 1.6;
         }
 
-        /* --- 4. SERVICES GRID --- */
+        /* --- 4. SERVICES --- */
         .capabilities-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            gap: 25px;
             text-align: left;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             border-top: 1px solid #eee;
-            padding-top: 40px;
+            padding-top: 30px;
         }
 
         .cap-item h3 {
             color: var(--navy-primary);
             font-size: 1rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         
         .cap-item p { font-size: 0.95rem; color: var(--text-grey); line-height: 1.5; }
@@ -140,87 +130,9 @@
             display: inline-block;
             background-color: var(--navy-primary);
             color: var(--white);
-            padding: 18px 40px;
+            padding: 15px 35px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             text-decoration: none;
-            border-radius: 2px;
-            transition: opacity 0.3s ease;
-        }
-        
-        .btn-primary:hover { opacity: 0.9; }
-
-        /* --- 6. FOOTER --- */
-        .info-bar {
-            background-color: #f8f9fa;
-            border-top: 1px solid #e9ecef;
-            padding: 20px;
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-grey);
-        }
-
-        footer.site-footer {
-            text-align: center;
-            padding: 20px;
-            color: rgba(255,255,255,0.4);
-            font-size: 0.75rem;
-        }
-
-        /* MOBILE FIXES */
-        @media (max-width: 768px) {
-            h1.hero-headline { font-size: 1.8rem; }
-            .card-inner { padding: 40px 20px; }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="brand-wrapper">
-            <img src="logo.png" alt="Logo" class="logo-image">
-            <div class="brand-name">Aamodt Strategic</div>
-        </div>
-    </header>
-
-    <main>
-        <div class="content-card">
-            <div class="card-inner">
-                <h1 class="hero-headline">Government IT Operations & <br>Strategic Solutions</h1>
-                <p class="hero-sub">Mission-Critical Infrastructure Support</p>
-                
-                <p class="hero-desc">
-                    Aamodt Strategic, LLC delivers secure asset disposition, identity lifecycle management, and systems engineering for <strong>Federal, State, and Local</strong> agencies.
-                </p>
-
-                <div class="capabilities-grid">
-                    <div class="cap-item">
-                        <h3>Systems Operations</h3>
-                        <p>Enterprise infrastructure management, cloud optimization, and Microsoft 365 administration.</p>
-                    </div>
-                    <div class="cap-item">
-                        <h3>Strategic Consulting</h3>
-                        <p>Technology roadmap planning, compliance frameworks (NIST), and operational efficiency.</p>
-                    </div>
-                    <div class="cap-item">
-                        <h3>Program Support</h3>
-                        <p>Dedicated technical leadership and logistics for complex public sector requirements.</p>
-                    </div>
-                </div>
-
-                <a href="mailto:contact@aamodtstrategic.com" class="btn-primary">Request Capability Statement</a>
-            </div>
-
-            <div class="info-bar">
-                <strong>NAICS:</strong> 541519, 541513, 541611 &nbsp;|&nbsp; <strong>CAGE / UEI:</strong> Registration in Progress
-            </div>
-        </div>
-    </main>
-
-    <footer class="site-footer">
-        &copy; 2026 Aamodt Strategic, LLC. United States of America.
-    </footer>
-
-</body>
-</html>
+            border-radius: 3
