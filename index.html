@@ -8,13 +8,11 @@
     <link rel="icon" type="image/png" href="logo.png">
 
     <style>
-        /* BASE STYLES */
+        /* --- 1. BASE STYLES --- */
         :root {
             --navy-deep: #020b16;
             --navy-primary: #051b35;
-            --navy-light: #0a2a50;
             --gold-accent: #c9920e;
-            --gold-light: #e0a826;
             --white: #ffffff;
             --text-grey: #555555;
         }
@@ -30,12 +28,11 @@
             flex-direction: column;
         }
 
-        /* HEADER */
+        /* --- 2. HEADER --- */
         header {
             width: 100%;
             padding: 15px 5%;
             display: flex;
-            justify-content: flex-start;
             align-items: center;
             position: fixed;
             top: 0;
@@ -43,13 +40,16 @@
             background: rgba(2, 11, 22, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
         }
 
         .brand-wrapper { display: flex; align-items: center; gap: 15px; }
 
-        /* LOGO IMAGE */
-        .logo-image { height: 50px; width: auto; border-radius: 4px; }
+        /* LOGO SETTINGS */
+        .logo-image { 
+            height: 45px; 
+            width: auto; 
+            display: block;
+        }
 
         .brand-name {
             color: var(--white);
@@ -59,13 +59,14 @@
             text-transform: uppercase;
         }
 
-        /* MAIN HERO SECTION */
+        /* --- 3. MAIN CONTENT --- */
         main {
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 140px 20px 60px 20px;
+            /* Extra padding on top to ensure header doesn't hide content */
+            padding: 160px 20px 60px 20px;
         }
 
         .content-card {
@@ -73,9 +74,10 @@
             width: 100%;
             max-width: 900px;
             border-radius: 4px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
             overflow: hidden;
             position: relative;
+            z-index: 1; /* Ensures card sits on top of background */
         }
 
         /* Gold Top Bar */
@@ -83,7 +85,7 @@
             content: '';
             position: absolute;
             top: 0; left: 0; width: 100%; height: 6px;
-            background: linear-gradient(90deg, var(--gold-accent), var(--gold-light));
+            background: #c9920e;
         }
 
         .card-inner { padding: 60px 50px; text-align: center; }
@@ -113,8 +115,112 @@
             line-height: 1.6;
         }
 
-        /* CAPABILITIES GRID */
+        /* --- 4. SERVICES GRID --- */
         .capabilities-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap:
+            gap: 30px;
+            text-align: left;
+            margin-bottom: 50px;
+            border-top: 1px solid #eee;
+            padding-top: 40px;
+        }
+
+        .cap-item h3 {
+            color: var(--navy-primary);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .cap-item p { font-size: 0.95rem; color: var(--text-grey); line-height: 1.5; }
+
+        /* --- 5. BUTTON --- */
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--navy-primary);
+            color: var(--white);
+            padding: 18px 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: opacity 0.3s ease;
+        }
+        
+        .btn-primary:hover { opacity: 0.9; }
+
+        /* --- 6. FOOTER --- */
+        .info-bar {
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-grey);
+        }
+
+        footer.site-footer {
+            text-align: center;
+            padding: 20px;
+            color: rgba(255,255,255,0.4);
+            font-size: 0.75rem;
+        }
+
+        /* MOBILE FIXES */
+        @media (max-width: 768px) {
+            h1.hero-headline { font-size: 1.8rem; }
+            .card-inner { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="brand-wrapper">
+            <img src="logo.png" alt="Logo" class="logo-image">
+            <div class="brand-name">Aamodt Strategic</div>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-card">
+            <div class="card-inner">
+                <h1 class="hero-headline">Government IT Operations & <br>Strategic Solutions</h1>
+                <p class="hero-sub">Mission-Critical Infrastructure Support</p>
+                
+                <p class="hero-desc">
+                    Aamodt Strategic, LLC delivers secure asset disposition, identity lifecycle management, and systems engineering for <strong>Federal, State, and Local</strong> agencies.
+                </p>
+
+                <div class="capabilities-grid">
+                    <div class="cap-item">
+                        <h3>Systems Operations</h3>
+                        <p>Enterprise infrastructure management, cloud optimization, and Microsoft 365 administration.</p>
+                    </div>
+                    <div class="cap-item">
+                        <h3>Strategic Consulting</h3>
+                        <p>Technology roadmap planning, compliance frameworks (NIST), and operational efficiency.</p>
+                    </div>
+                    <div class="cap-item">
+                        <h3>Program Support</h3>
+                        <p>Dedicated technical leadership and logistics for complex public sector requirements.</p>
+                    </div>
+                </div>
+
+                <a href="mailto:contact@aamodtstrategic.com" class="btn-primary">Request Capability Statement</a>
+            </div>
+
+            <div class="info-bar">
+                <strong>NAICS:</strong> 541519, 541513, 541611 &nbsp;|&nbsp; <strong>CAGE / UEI:</strong> Registration in Progress
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        &copy; 2026 Aamodt Strategic, LLC. United States of America.
+    </footer>
+
+</body>
+</html>
