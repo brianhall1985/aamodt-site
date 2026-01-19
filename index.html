@@ -32,7 +32,7 @@
         /* --- 2. PREMIUM HEADER (Sticky & Glass) --- */
         header {
             width: 100%;
-            padding: 20px 5%;
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -40,7 +40,7 @@
             top: 0;
             z-index: 1000;
             background: rgba(2, 11, 22, 0.95); /* Semi-transparent dark */
-            backdrop-filter: blur(10px); /* The "Premium" Blur Effect */
+            backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 4px 20px rgba(0,0,0,0.4);
         }
@@ -48,13 +48,14 @@
         .brand-wrapper {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
         }
 
-        .logo-icon {
-            width: 32px;
-            height: 32px;
-            fill: var(--gold-accent);
+        /* NEW LOGO IMAGE STYLES */
+        .logo-image {
+            height: 50px; /* Adjust size here */
+            width: auto;
+            border-radius: 4px; /* Optional: smooth corners if needed */
         }
 
         .brand-name {
@@ -83,14 +84,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 140px 20px 60px 20px; /* Top padding clears fixed header */
+            padding: 140px 20px 60px 20px;
         }
 
         .content-card {
             background: var(--white);
             width: 100%;
             max-width: 900px;
-            padding: 0; /* Removing padding here to control internal layout */
+            padding: 0;
             border-radius: 4px;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
             overflow: hidden;
@@ -138,7 +139,7 @@
             margin: 0 auto 50px auto;
         }
 
-        /* --- 4. CAPABILITIES GRID (Clean Layout) --- */
+        /* --- 4. CAPABILITIES GRID --- */
         .capabilities-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -159,7 +160,6 @@
             gap: 10px;
         }
 
-        /* Small icons for list items */
         .cap-item h3::before {
             content: '';
             display: block;
@@ -175,7 +175,7 @@
             line-height: 1.5;
         }
 
-        /* --- 5. CALL TO ACTION (High End Button) --- */
+        /* --- 5. CALL TO ACTION --- */
         .btn-primary {
             display: inline-block;
             background-color: var(--navy-primary);
@@ -193,7 +193,7 @@
 
         .btn-primary:hover {
             background-color: var(--navy-light);
-            transform: translateY(-2px); /* Subtle lift */
+            transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(5, 27, 53, 0.4);
         }
 
@@ -210,9 +210,7 @@
             color: var(--text-grey);
         }
 
-        .info-item strong {
-            color: var(--navy-primary);
-        }
+        .info-item strong { color: var(--navy-primary); }
 
         footer.site-footer {
             text-align: center;
@@ -226,7 +224,7 @@
             h1.hero-headline { font-size: 1.8rem; }
             .card-inner { padding: 40px 25px; }
             .capabilities-grid { grid-template-columns: 1fr; }
-            .status-badge { display: none; } /* Hide badge on mobile header to save space */
+            .status-badge { display: none; }
         }
     </style>
 </head>
@@ -234,9 +232,7 @@
 
     <header>
         <div class="brand-wrapper">
-            <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-            </svg>
+            <img src="logo.png" alt="Aamodt Strategic Logo" class="logo-image">
             <div class="brand-name">Aamodt Strategic</div>
         </div>
         <div class="status-badge">SDVOSB CERTIFIED</div>
