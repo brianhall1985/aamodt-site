@@ -4,131 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        :root {
+            --brand-blue: #003366;
+            --brand-gold: #C5A059;
+            --text-gray: #333333;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
+            color: var(--text-gray);
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #fff;
+            padding: 0;
+            background-color: #ffffff;
         }
 
         header {
-            border-bottom: 2px solid #000;
-            padding-bottom: 20px;
-            margin-bottom: 40px;
+            background-color: var(--brand-blue);
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--brand-gold);
         }
 
-        .logo {
-            font-size: 2.5rem;
-            font-weight: bold;
+        .logo-container {
+            margin-bottom: 10px;
+        }
+
+        .logo-mark {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--brand-gold);
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin: 10px 0 5px 0;
             letter-spacing: 2px;
-            margin: 0;
+            text-transform: uppercase;
         }
 
         .subtitle {
-            font-style: italic;
-            color: #666;
-            margin-top: 5px;
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            color: var(--brand-gold);
+            text-transform: uppercase;
+            font-weight: 600;
         }
 
-        .hero {
-            margin-bottom: 60px;
+        main {
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .capabilities-container {
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .label {
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-            color: #888;
-            font-weight: bold;
-            margin-bottom: 10px;
             display: block;
-        }
-
-        h2 {
-            font-size: 2rem;
-            font-weight: 400;
-            max-width: 900px;
-            margin-top: 0;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
-        .column {
-            border-top: 1px solid #000;
-            padding-top: 20px;
-        }
-
-        h3 {
             text-transform: uppercase;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--brand-blue);
+            margin-bottom: 20px;
+            letter-spacing: 1.5px;
+        }
+
+        .capabilities-text {
+            font-size: 1.8rem;
+            font-weight: 300;
+            color: var(--text-gray);
+            line-height: 1.4;
+            margin: 0;
         }
 
         footer {
-            margin-top: 80px;
-            padding-top: 40px;
-            border-top: 1px solid #eee;
+            margin-top: 40px;
+            padding: 60px 20px;
+            background-color: #f9f9f9;
             text-align: center;
+            border-top: 1px solid #eee;
         }
 
         .btn {
             display: inline-block;
-            padding: 15px 30px;
-            border: 2px solid #000;
+            padding: 18px 40px;
+            background-color: var(--brand-blue);
+            color: #ffffff;
             text-decoration: none;
-            color: #000;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
-            transition: all 0.3s;
+            border-radius: 2px;
+            transition: background 0.3s ease;
         }
 
         .btn:hover {
-            background: #000;
-            color: #fff;
+            background-color: #002244;
+        }
+
+        .copyright {
+            margin-top: 30px;
+            font-size: 0.75rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1 class="logo">AAMODT STRATEGIC</h1>
-        <div class="subtitle">VETERAN-OWNED SMALL BUSINESS</div>
+        <div class="logo-container">
+            <div class="logo-mark">AA</div>
+        </div>
+        <h1>AAMODT STRATEGIC</h1>
+        <div class="subtitle">Veteran-Owned Small Business</div>
     </header>
 
-    <section class="hero">
-        <span class="label">Capabilities</span>
-        <h2>Providing high-consequence IT infrastructure and strategic operational oversight for federal agencies and enterprise-level decommissioning.</h2>
-    </section>
-
-    <div class="grid">
-        <div class="column">
-            <h3>Security</h3>
-            <p>Specialized data sanitization and access revocation frameworks designed for high-security environments.</p>
+    <main>
+        <div class="capabilities-container">
+            <span class="label">Capabilities</span>
+            <p class="capabilities-text">
+                Delivering strategic IT infrastructure oversight and operational management for complex enterprise environments and large-scale technical transitions.
+            </p>
         </div>
-        <div class="column">
-            <h3>Operational Efficiency</h3>
-            <p>Strategic wind-down of technical debt and rapid infrastructure reorganization for lean team performance.</p>
-        </div>
-        <div class="column">
-            <h3>Federal Readiness</h3>
-            <p>Service-Disabled Veteran-Owned Small Business (SDVOSB) currently in the final stages of certification.</p>
-        </div>
-    </div>
+    </main>
 
     <footer>
         <a href="mailto:contact@aamodtstrategic.com" class="btn">Contact Office</a>
-        <p style="font-size: 0.8rem; margin-top: 20px; color: #888;">
-            SECURE OPERATIONS • ALL RIGHTS RESERVED
+        <p class="copyright">
+            Secure Operations • All Rights Reserved
         </p>
     </footer>
 
