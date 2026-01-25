@@ -3,81 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aamodt Strategic, LLC | Federal Operations</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .gold-text { color: #D4AF37; }
-        .gold-border { border-color: #D4AF37; }
-        .navy-bg { background-color: #0A192F; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #fff;
+        }
+
+        header {
+            border-bottom: 2px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        .subtitle {
+            font-style: italic;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .hero {
+            margin-bottom: 60px;
+        }
+
+        .label {
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            color: #888;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            max-width: 900px;
+            margin-top: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .column {
+            border-top: 1px solid #000;
+            padding-top: 20px;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border: 2px solid #000;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: #000;
+            color: #fff;
+        }
     </style>
 </head>
-<body class="bg-white text-slate-900">
+<body>
 
-    <header class="navy-bg py-20 px-6 border-b-8 gold-border">
-        <div class="max-w-6xl mx-auto flex flex-col items-center">
-            <div class="mb-6 border-2 gold-border p-3">
-                <span class="text-3xl font-black gold-text tracking-tighter">AA</span>
-            </div>
-            <h1 class="text-4xl md:text-5xl font-black text-white tracking-[0.25em] uppercase mb-4 text-center">
-                Aamodt Strategic
-            </h1>
-            <div class="h-px w-24 bg-[#D4AF37] mb-4"></div>
-            <p class="text-slate-400 uppercase tracking-[0.4em] text-xs font-bold">
-                Veteran-Owned Small Business
-            </p>
-        </div>
+    <header>
+        <h1 class="logo">AAMODT STRATEGIC</h1>
+        <div class="subtitle">VETERAN-OWNED SMALL BUSINESS</div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-24">
-        
-        <section class="mb-24 max-w-4xl">
-            <h2 class="text-xs font-black gold-text uppercase tracking-widest mb-6">Capabilities</h2>
-            <p class="text-3xl md:text-4xl font-light text-slate-800 leading-tight">
-                Providing <span class="font-bold text-slate-900">high-consequence IT infrastructure</span> and strategic operational oversight for federal agencies and enterprise-level decommissioning.
-            </p>
-        </section>
+    <section class="hero">
+        <span class="label">Capabilities</span>
+        <h2>Providing high-consequence IT infrastructure and strategic operational oversight for federal agencies and enterprise-level decommissioning.</h2>
+    </section>
 
-        <section class="grid md:grid-cols-3 gap-12 mb-32">
-            <div class="border-t-4 border-slate-900 pt-8">
-                <h3 class="text-sm font-black uppercase tracking-widest mb-4">Security</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">
-                    Specialized data sanitization and access revocation frameworks designed for high-security environments.
-                </p>
-            </div>
-            <div class="border-t-4 border-slate-900 pt-8">
-                <h3 class="text-sm font-black uppercase tracking-widest mb-4">Operational Efficiency</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">
-                    Strategic wind-down of technical debt and rapid infrastructure reorganization for lean team performance.
-                </p>
-            </div>
-            <div class="border-t-4 border-slate-900 pt-8">
-                <h3 class="text-sm font-black uppercase tracking-widest mb-4">Federal Readiness</h3>
-                <p class="text-slate-600 leading-relaxed text-sm">
-                    Service-Disabled Veteran-Owned Small Business (SDVOSB) currently in the final stages of certification.
-                </p>
-            </div>
-        </section>
+    <div class="grid">
+        <div class="column">
+            <h3>Security</h3>
+            <p>Specialized data sanitization and access revocation frameworks designed for high-security environments.</p>
+        </div>
+        <div class="column">
+            <h3>Operational Efficiency</h3>
+            <p>Strategic wind-down of technical debt and rapid infrastructure reorganization for lean team performance.</p>
+        </div>
+        <div class="column">
+            <h3>Federal Readiness</h3>
+            <p>Service-Disabled Veteran-Owned Small Business (SDVOSB) currently in the final stages of certification.</p>
+        </div>
+    </div>
 
-        <section class="border-8 border-slate-900 p-12 text-center bg-slate-50">
-            <h3 class="text-2xl font-bold uppercase tracking-tight mb-2">Engage for 2026</h3>
-            <p class="text-slate-500 mb-10 text-sm uppercase tracking-widest font-medium italic italic">Strategic operations in development.</p>
-            
-            <a href="mailto:contact@aamodtstrategic.com" 
-               class="inline-block bg-[#0A192F] text-white px-12 py-5 font-black uppercase tracking-[0.2em] hover:bg-black transition-all text-sm">
-                Contact Office
-            </a>
-            
-            <p class="mt-8 text-xs font-bold text-slate-400 uppercase">
-                Anderson County, South Carolina
-            </p>
-        </section>
-
-    </main>
-
-    <footer class="bg-slate-900 text-white py-12 text-center">
-        <p class="text-[10px] uppercase tracking-[0.5em] text-slate-500">
-            &copy; 2026 Aamodt Strategic, LLC &bull; Secure Operations &bull; All Rights Reserved
+    <footer>
+        <a href="mailto:contact@aamodtstrategic.com" class="btn">Contact Office</a>
+        <p style="font-size: 0.8rem; margin-top: 20px; color: #888;">
+            SECURE OPERATIONS • ALL RIGHTS RESERVED
         </p>
     </footer>
 
